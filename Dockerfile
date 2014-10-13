@@ -32,4 +32,6 @@ COPY localtime /etc/localtime
 COPY timezone /etc/timezone
 COPY default /etc/apache2/sites-available/default
 RUN cd /var/www/ && unzip rep2_v1_8_103.zip
+COPY conf_admin.inc.php /var/www/rep2/conf/conf_admin.inc.php
+COPY conf_hostcheck.php /var/www/rep2/conf/conf_hostcheck.php
 RUN mkdir /var/www/rep2/data && chmod 777 /var/www/rep2/data/
